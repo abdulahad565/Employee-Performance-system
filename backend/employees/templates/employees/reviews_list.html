@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviews List</title>
+</head>
+<body>
+    <h1>Reviews</h1>
+    <table border="1">
+        <tr>
+            <th>review_period</th>
+            <th>rating</th>
+            <th>feedback</th>
+            <th>review_date</th>
+        </tr>
+        {% for review in reviews %}
+        
+        <tr>
+            <td>{{ review.review_period }}</td>
+            <td>{{ review.rating }}</td>
+            <td>{{ review.feedback }}</td>
+            <td>{{ review.review_date }}</td>
+            <td>{{ employee.fullname }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">No reviews found.</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
